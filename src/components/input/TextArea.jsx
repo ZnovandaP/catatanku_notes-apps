@@ -1,13 +1,13 @@
 import * as React from 'react';
 
 export default function TextArea({
-  onInput, value, id, placeholder, required,
+  onChange, value, id, placeholder, required,
 }) {
   return (
     <textarea
       name={id}
       id={id}
-      onInput={onInput}
+      onChange={onChange}
       value={value}
       placeholder={placeholder}
       required={required}

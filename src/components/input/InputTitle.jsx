@@ -29,7 +29,7 @@ export default function InputTitle({ setFormAddNote, formAddNote }) {
       </div>
       <TextInput
         id="title-note"
-        onInput={(e) => handleInputTitle(e)}
+        onChange={(e) => handleInputTitle(e)}
         value={formAddNote?.title}
         required
         placeholder="Masukkan Judul..."

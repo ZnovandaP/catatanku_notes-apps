@@ -3,7 +3,7 @@ import * as React from 'react';
 import Label from '../input/Label';
 import SearchInput from '../input/SearchInput';
 
-export default function SearchLayout({ onInput, value }) {
+export default function SearchLayout({ onChange, value }) {
   return (
     <section className="pt-28 flex justify-center items-center px-8 ">
       <Label
@@ -16,7 +16,7 @@ export default function SearchLayout({ onInput, value }) {
 
         <SearchInput
           id="search-note"
-          onInput={onInput}
+          onChange={onChange}
           value={value}
         />
       </Label>

@@ -44,7 +44,7 @@ export default function NoteApp() {
       <AppLayout>
         <SearchLayout
           value={keywordSearch}
-          onInput={(e) => setKeywordSearch(e.target.value)}
+          onChange={(e) => setKeywordSearch(e.target.value)}
         />
         <NotesLayout
           notes={notesUnarchived}

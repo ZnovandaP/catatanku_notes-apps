@@ -17,7 +17,7 @@ export default function InputNote({ setFormAddNote, formAddNote }) {
       </h3>
       <TextArea
         id="title-note"
-        onInput={(e) => handleInputTitle(e)}
+        onChange={(e) => handleInputTitle(e)}
         value={formAddNote?.body}
         required
         placeholder="Tuliskan Catatanmu Disini..."
