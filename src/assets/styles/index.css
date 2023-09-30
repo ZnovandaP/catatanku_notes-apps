@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border focus:outline-dashed focus:outline-offset-4 focus:outline-textMedium focus:outline-2
+}
