@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { BiEditAlt } from 'react-icons/bi';
 
-export default function ButtonEditNote({ onClick }) {
+export default function ButtonEditNote({ onClick, isArchive }) {
   return (
     <button
       type="button"
       name="edit note"
       title="Edit Catatan"
       onClick={onClick}
-      className="min-w-[44px] min-h-[44px] absolute top-[10px] right-2  text-sky-500 flex items-center justify-center gap-2 font-[500] tracking-wide hover:opacity-75"
+      className={`min-w-[44px] min-h-[44px] absolute bottom-7 right-1/2 translate-x-1/2 rounded-full text-sky-500 flex bg-neutral-800 items-center justify-center gap-2 font-[500] tracking-wide ring-1 hover:ring-sky-500 ${!isArchive ? 'ring-primary/60' : 'ring-archived/60'}`}
     >
       <span className="text-xl">
         <BiEditAlt />

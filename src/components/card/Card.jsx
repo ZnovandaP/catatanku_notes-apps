@@ -16,7 +16,7 @@ export default function Card({
       className={`relative flex flex-col gap-4 min-w-[250px] min-h-[300px] max-w-full bg-transparent border rounded-md hover:shadow-2xl focus:shadow-2xl transition-all duration-300 ${!isArchive ? 'border-primary hover:shadow-primary focus:shadow-primary ' : 'border-archived hover:shadow-archived focus:shadow-archived'}`}
     >
       {children}
-      <ButtonEditNote onClick={onEdit} />
+      <ButtonEditNote isArchive={isArchive} onClick={onEdit} />
     </div>
   );
 }
@@ -24,10 +24,10 @@ export default function Card({
 function Head({ title, date, isArchive }) {
   return (
     <section
-      className="px-4 pt-4 flex flex-col h-[25%]"
+      className="px-4 pt-4 flex flex-col gap-1 h-[25%]"
     >
-      <h3 className={`flex items-center font-script text-[1.3rem] min-h-[40px] tracking-wider line-clamp-1 ${!isArchive ? 'text-primary' : 'text-archived'}`}>
-        {title}
+      <h3 className={`flex items-center font-head text-xl tracking-wider  ${!isArchive ? 'text-primary' : 'text-archived'}`}>
+        <span className="line-clamp-1">{title}</span>
       </h3>
       <p className="text-textNormal font-medium tracking-wide line-clamp-1">
         {date}
@@ -38,7 +38,7 @@ function Head({ title, date, isArchive }) {
 
 function Body({ noteBody }) {
   return (
-    <section className="px-4 h-[60%]">
+    <section className="px-4 h-[60%] pb-5">
       <p className="text-textMedium font-medium tracking-wider hyphens-auto line-clamp-[9]">
         {noteBody}
       </p>
@@ -49,7 +49,7 @@ function Body({ noteBody }) {
 function Foot({ onDelete, onArchive, isArchive }) {
   return (
     <section
-      className={`px-4 divide-x  flex items-center border-t-[1px]  h-[15%] ${!isArchive ? 'divide-primary/60 border-primary/60' : 'divide-archived/60 border-archived/60'}`}
+      className={` divide-x  flex items-center border-t-[1px]  h-[15%] ${!isArchive ? 'divide-primary/60 border-primary/60' : 'divide-archived/60 border-archived/60'}`}
     >
       <ButtonDeleteCard onClick={onDelete} />
       <ButtonArchiveCard onClick={onArchive} isArchive={isArchive} />
