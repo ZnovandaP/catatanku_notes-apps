@@ -5,7 +5,7 @@ export default function BodyDetailNote({ notes, modalIsOpen }) {
   const currentNote = notes?.find((note) => note?.id === modalIsOpen.id);
 
   return (
-    <section className="flex h-full justify-center items-center px-8 md:px-12">
+    <section className="min-h-full p-8 md:p-12">
       <TableDetailNoteLayout note={currentNote} />
     </section>
   );
