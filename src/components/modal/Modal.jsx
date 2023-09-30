@@ -74,7 +74,7 @@ export function Popup({ children }) {
 
 function Head({ onClose, text }) {
   return (
-    <section className="flex justify-between items-center h-[12%] px-8 border-b border-primary/60">
+    <section className="flex justify-between items-center h-[12%] px-4 sm:px-8 border-b border-primary/60">
       <h2
         className="text-center text-textMedium tracking-wider font-bold md:text-base"
       >
